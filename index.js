@@ -11,32 +11,32 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'description',
+        name: 'Description',
         message: 'Write a brief description of your application.'
     },
     {
         type: 'input',
-        name: 'installation',
+        name: 'Installation',
         message: 'How can someone install the application?'
     },
     {
         type: 'input',
-        name: 'usage',
+        name: 'Usage',
         message: 'How does someone use your application?'
     },
     {
         type: 'input',
-        name: 'contributing',
+        name: 'Contributing',
         message: `Can other users contribute to your project? How?.`
     },
     {
         type: 'input',
-        name: 'tests',
+        name: 'Tests',
         message: `How can users can test your application?`
     },
     {
         type: 'list',
-        name: 'license',
+        name: 'License',
         message: `Which of these licenses would you like for your project?`,
         choices: [ "MIT", "GNU GPLv2", "GNU GPLv3", "Apache 2.0", "ISC", "No license, thanks"]
     },
@@ -54,8 +54,10 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fileSystem.writeFile(`${fileName}.md`, JSON.stringify(data), err => 
-        err ? console.log(err) : console.log(`Check out your new README! It's called ${fileName}.md`))
+    const keys = Object.keys(data);
+    console.log(keys);
+    fileSystem.writeFile(`${fileName}.md`, `# ${data.name}\n`, err => 
+        err ? console.log(err) : console.log(`Document created!`));
 }
 
 // TODO: Create a function to initialize app
