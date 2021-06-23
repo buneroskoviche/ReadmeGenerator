@@ -16,22 +16,38 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Give instructions on how to install your application.'
+        message: 'How can someone install the application?'
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Explain how to use your application.'
+        message: 'How does someone use your application?'
     },
     {
         type: 'input',
         name: 'contributing',
-        message: `List the application's contributors.`
+        message: `Can other users contribute to your project? How?.`
     },
     {
         type: 'input',
         name: 'tests',
-        message: `List the application's contributors.`
+        message: `How can users can test your application?`
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: `Which of these licenses would you like for your project?`,
+        choices: [ "MIT", "GNU GPLv2", "GNU GPLv3", "Apache 2.0", "ISC", "No license, thanks"]
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: `What is your GitHub user name?`
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: `What is your email address?`
     }
     
 ];
