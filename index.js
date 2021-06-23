@@ -56,8 +56,12 @@ const questions = [
 function writeToFile(fileName, data) {
     const keys = Object.keys(data);
     console.log(keys);
-    fileSystem.writeFile(`${fileName}.md`, `# ${data.name}\n`, err => 
+    fileSystem.writeFile(`${fileName}.md`, `# ${data.name}\n\n`, err => 
         err ? console.log(err) : console.log(`Document created!`));
+    keys.forEach(entry => {
+        fileSystem.appendFile(`${fileName}.md`, `## ${entry}\n${data[`${entry}`]}\n\n`, err =>
+        err ? console.log(err) : console.log(`${entry} section added!`));
+    });
 }
 
 // TODO: Create a function to initialize app
