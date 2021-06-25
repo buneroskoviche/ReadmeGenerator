@@ -64,20 +64,20 @@ ${renderLicenseBadge(data.license)}\n
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
-* [License](#license)
+* [License](#license)\n
 ## Description
-${data.description}
+${data.description}\n
 ## Installation
-${data.installation}
+${data.installation}\n
 ## Usage
-${data.usage}
+${data.usage}\n
 ## Contributing
-${data.contributing}
+${data.contributing}\n
 ## Tests
-${data.tests}
+${data.tests}\n
 ## Questions
-Have questions? Feel free to contacting me through my [GithHub profile](https://github.com/${data.github}) 
-or email me at ${data.email}
+Have questions? Feel free to contact me through my [GithHub profile](https://github.com/${data.github}) 
+or email me at ${data.email}\n
 ## License
 ${renderLicenseSection(data.license)}
 `;
