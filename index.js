@@ -73,7 +73,6 @@ function init() {
     .then(data => {
         writeToFile(`${data.title}`, generateMarkdown(data))
     })
-
 }
 
 // Function call to initialize app

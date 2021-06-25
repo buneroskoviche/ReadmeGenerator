@@ -45,29 +45,18 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  switch (license) {
-    case "MIT":
-      return "https://opensource.org/licenses/MIT";
-    case "GNU GPLv2":
-      return "https://opensource.org/licenses/GPL-2.0";
-    case "GNU GPLv3":
-      return "https://opensource.org/licenses/GPL-3.0";
-    case "Apache 2.0":
-      return "https://opensource.org/licenses/Apache-2.0";
-    case "ISC":
-      return "https://opensource.org/licenses/ISC";
-    default:
-      return '';
+  if (license) {
+    return `Licensed under the [${license}](${renderLicenseLink(license)}) license.` ;
+  } else {
+    return '';
   }
+  
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.name}
-
 ${renderLicenseBadge(data.license)}\n
-${renderLicenseSection(data.license)}\n
-${renderLicenseLink(data.license)}\n
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
@@ -75,6 +64,7 @@ ${renderLicenseLink(data.license)}\n
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
+* [License](#license)
 ## Description
 ${data.description}
 ## Installation
@@ -88,6 +78,8 @@ ${data.tests}
 ## Questions
 Have questions? Feel free to contacting me through my [GithHub profile](https://github.com/${data.github}) 
 or email me at ${data.email}
+## License
+${renderLicenseSection(data.license)}
 `;
 }
 
