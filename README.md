@@ -1,6 +1,6 @@
 # Readme Generator
 
-![screenshot](https://user-images.githubusercontent.com/80650523/123498947-461b6580-d5f0-11eb-84e0-bf03c4d0d95f.PNG)
+![screenshot](https://user-images.githubusercontent.com/80650523/123498964-7236e680-d5f0-11eb-9ff7-0daee3a8213a.PNG)
 
 ## Table of Contents
 * [Description](#description)
