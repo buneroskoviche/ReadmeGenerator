@@ -45,8 +45,8 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license) {
-    return `Licensed under the [${license}](${renderLicenseLink(license)}) license.` ;
+  if (license !== "No license, thanks") {
+    return `## License\nLicensed under the [${license}](${renderLicenseLink(license)}) license.` ;
   } else {
     return '';
   }
@@ -78,7 +78,6 @@ ${data.tests}\n
 ## Questions
 Have questions? Feel free to contact me through my [GithHub profile](https://github.com/${data.github}) 
 or email me at ${data.email}\n
-## License
 ${renderLicenseSection(data.license)}
 `;
 }
